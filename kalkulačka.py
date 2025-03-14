@@ -15,10 +15,16 @@ frame1.pack()
 frame2 = Frame(okno, bg = "#4C5958")
 frame2.pack()
 
+def vlozit_1():
+
+    davat.insert(END, 1)
+
+
+
 davat = Entry(frame1, width=30, borderwidth= 5, relief="sunken",font = main_font, justify="right", background="#10403B", fg = "white" )
 davat.grid(column=0, row=0, padx=10, pady=10, ipadx=10, ipady=10)
 
-button_1 = Button(frame2,text="1",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53")
+button_1 = Button(frame2,text="1",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53",command=vlozit_1)
 button_1.grid(column=0, row = 2, padx=10, pady=10, ipadx=20, ipady=5)
 
 button_2 = Button(frame2,text="2",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53")
@@ -47,4 +53,9 @@ button_9.grid(column=2, row = 0, padx=10, pady=10, ipadx=20, ipady=5)
 
 button_0 = Button(frame2,text="0",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53")
 button_0.grid(column=1, row = 3, padx=10, pady=10, ipadx=20, ipady=5)
+
+button_back = Button(frame2,text="⌫",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53")
+button_back.grid(column=0, row = 3, padx=5, pady=10, ipadx=5, ipady=5)
+
+
 okno.mainloop()
