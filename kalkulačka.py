@@ -2,7 +2,7 @@ from tkinter import *
 okno = Tk()
 
 okno.title("Kalkulačka")
-okno.iconbitmap("ikonka.ico")
+#okno.iconbitmap("ikonka.ico")
 okno.geometry("500x550+500+300")
 okno.resizable(False,False)
 okno.config(bg = "#4C5958")
@@ -18,7 +18,17 @@ frame2.pack()
 def vlozit_1():
 
     davat.insert(END, 1)
+def vlozit_2():
 
+    davat.insert(END, 2)
+    
+def vlozit_3():
+
+    davat.insert(END, 3)
+
+def vlozit_4():
+
+    davat.insert(END, 4)
 
 
 davat = Entry(frame1, width=30, borderwidth= 5, relief="sunken",font = main_font, justify="right", background="#10403B", fg = "white" )
@@ -27,13 +37,13 @@ davat.grid(column=0, row=0, padx=10, pady=10, ipadx=10, ipady=10)
 button_1 = Button(frame2,text="1",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53",command=vlozit_1)
 button_1.grid(column=0, row = 2, padx=10, pady=10, ipadx=20, ipady=5)
 
-button_2 = Button(frame2,text="2",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53")
+button_2 = Button(frame2,text="2",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53", command=vlozit_2)
 button_2.grid(column=1, row = 2, padx=10, pady=10, ipadx=20, ipady=5)
 
-button_3 = Button(frame2,text="3",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53")
+button_3 = Button(frame2,text="3",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53", command=vlozit_3)
 button_3.grid(column=2, row = 2, padx=10, pady=10, ipadx=20, ipady=5)
 
-button_4 = Button(frame2,text="4",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53")
+button_4 = Button(frame2,text="4",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53", command=vlozit_4)
 button_4.grid(column=0, row = 1, padx=10, pady=10, ipadx=20, ipady=5)
 
 button_5 = Button(frame2,text="5",font = number_font, borderwidth= 5, relief="groove",activeforeground=  "white",activebackground="#03A688", fg="white",bg="#005C53")
